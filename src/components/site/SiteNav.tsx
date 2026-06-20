@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 
-const links = [
+const links: { to: "/" | "/expertise" | "/experience" | "/skills"; label: string; exact?: boolean }[] = [
   { to: "/", label: "Home", exact: true },
   { to: "/expertise", label: "Expertise" },
   { to: "/experience", label: "Experience" },
   { to: "/skills", label: "Skills" },
-] as const;
+];
 
 export function SiteNav() {
   return (
