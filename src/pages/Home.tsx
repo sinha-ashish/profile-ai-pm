@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Container } from "../components/site/Container";
 import { SectionLabel } from "../components/site/SectionLabel";
 import { Reveal } from "../components/site/Reveal";
@@ -7,23 +8,16 @@ import { TriTier } from "../components/site/TriTier";
 import { articles } from "../lib/articles";
 import { useLanguage } from "../lib/LanguageContext";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Ashish Sinha — Enterprise AI Product Leader" },
-      { name: "description", content: "Senior AI Product Leader. 9 years scaling enterprise AI from prototype to production. €30M portfolio governance, 15+ GenAI use cases shipped." },
-      { property: "og:title", content: "Ashish Sinha — Enterprise AI Product Leader" },
-      { property: "og:description", content: "9 years leading cross-functional AI squads across €30M+ portfolios. Paris." },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: HomePage,
-});
-
-function HomePage() {
-  const { t } = useLanguage();
+export default function Home() {
+  const { t, lang } = useLanguage();
   const d = t.dashboard;
+
+  useEffect(() => {
+    document.title =
+      lang === "fr"
+        ? "Ashish Sinha — Leader Produit IA Enterprise · Paris"
+        : "Ashish Sinha — Enterprise AI Product Leader · Paris";
+  }, [lang]);
 
   return (
     <>
@@ -243,8 +237,7 @@ function HomePage() {
             {articles.map((a) => (
               <li key={a.slug}>
                 <Link
-                  to="/writing/$slug"
-                  params={{ slug: a.slug }}
+                  to={`/writing/${a.slug}`}
                   className="group block py-7 transition-colors hover:bg-card"
                 >
                   <div className="mb-2 flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-mid">
@@ -297,9 +290,6 @@ function HomePage() {
             <div className="flex flex-row flex-wrap gap-3 md:flex-col">
               <a href="mailto:ashish.sinha2408@gmail.com" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/10 bg-white/[0.07] px-[22px] py-3.5 text-[0.85rem] font-medium text-white transition-colors hover:bg-white/[0.12]">
                 ✉️ &nbsp;ashish.sinha2408@gmail.com
-              </a>
-              <a href="tel:+33618973960" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/10 bg-white/[0.07] px-[22px] py-3.5 text-[0.85rem] font-medium text-white transition-colors hover:bg-white/[0.12]">
-                📞 &nbsp;+33 6 18 97 39 60
               </a>
               <a href="https://www.linkedin.com/in/sinha-ashish/" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/10 bg-white/[0.07] px-[22px] py-3.5 text-[0.85rem] font-medium text-white transition-colors hover:bg-white/[0.12]">
                 💼 &nbsp;LinkedIn →
