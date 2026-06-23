@@ -10,19 +10,35 @@ type Ctx = {
 
 const LanguageContext = createContext<Ctx | null>(null);
 
+function detectInitialLang(): Lang {
+  if (typeof window === "undefined") return "en";
+  try {
+    const stored = localStorage.getItem("lang");
+    if (stored === "en" || stored === "fr") return stored;
+  } catch {}
+  const nav = (navigator.language || (navigator as any).userLanguage || "en").toLowerCase();
+  return nav.startsWith("fr") ? "fr" : "en";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("lang");
-      if (stored === "en" || stored === "fr") setLangState(stored);
-    } catch {}
+    const initial = detectInitialLang();
+    setLangState(initial);
   }, []);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    try { localStorage.setItem("lang", l); } catch {}
+    try {
+      localStorage.setItem("lang", l);
+    } catch {}
   };
 
   const toggle = () => setLang(lang === "en" ? "fr" : "en");
