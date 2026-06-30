@@ -1,0 +1,13 @@
+# Ashish Sinha — Enterprise AI Product Leader
+
+> Portfolio of a senior AI product leader focused on shipping enterprise AI from prototype to production — execution dashboard, operating manual, architecture vault, experience timeline, and writing.
+
+## Pages
+
+- [Home](/): Full portfolio with execution dashboard, expertise, operating instinct, manual, architecture vault, experience, skills, writing, and contact.
+- [The 80/40 Rule](/writing/80-40-rule): Article on why high-signal imperfection beats slow enterprise roadmaps.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Machine-readable list of public routes.
+- [robots.txt](/robots.txt): Crawler rules and sitemap reference.
