@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type {} from "@tanstack/react-start";
 import { articles } from "../lib/articles";
+import type {} from "@tanstack/react-start";
 
 const BASE_URL = "https://ai-product-paris.lovable.app";
 
