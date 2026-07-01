@@ -8,7 +8,8 @@ export type TimelineT = { dateStrong: string; date: string; role: string; compan
 export type SkillGroupT = { title: string; items: string[] };
 export type CertT = { icon: string; title: string; sub: string };
 export type TierT = { dot: string; title: string; desc: string; bar: number };
-export type FitBlockT = { label: string; body: string };
+export type FitSubBlockT = { subLabel: string; subBody: string };
+export type FitBlockT = { label: string; body: string } | { label: string; subBlocks: FitSubBlockT[] };
 
 export type Translation = {
   nav: { index: string; dashboard: string; manual: string; writing: string; resume: string; cta: string };
@@ -147,6 +148,10 @@ const en: Translation = {
       { label: "Environment", body: "High autonomy, fast sign-off culture. I do my best work when squads are empowered to move without multi-layered bureaucracy — slower organizational velocity is fine; that's exactly the zone where I add the most value. What's non-negotiable is the freedom to act on that velocity once I'm in." },
       { label: "Ownership", body: "Genuine product ownership, not delivery-management-in-name-only. I want to shape the roadmap, not just orchestrate someone else's." },
       { label: "Culture", body: "Fiercely user-obsessed, growth-centered teams that default to giving each other the benefit of the doubt. Ego-free isn't a slogan here — it's an operating requirement." },
+      { label: "WHAT I BRING", subBlocks: [
+        { subLabel: "Applied AI Fluency", subBody: "Through sustained, hands-on development and deployment of GenAI prototypes across a wide range of use cases — not just directing delivery but building directly inside it — I've developed genuine technical fluency across the AI stack: architecture, guardrailing, compliance frameworks, and the economics of running AI at enterprise scale. I'm actively refining the methodologies behind that economic layer, grounded in the Tri-Tier routing framework and token consumption modelling I've built and iterated in production. This isn't fluency by proximity. It's fluency by doing." },
+        { subLabel: "Executive AI Arbitrage", subBody: "We're in an unprecedented moment for senior leadership: the pressure to adopt AI is real, but so is the risk of deploying it badly. Most COMEX-level leaders are — rightly — more pragmatic and risk-calibrated than the hype cycle suggests. I'm uniquely placed to operate at that interface: translating AI capability into ROI-justified, risk-calibrated decisions that executives can actually act on, advising on use-case prioritisation, model selection, and budget allocation based on genuine understanding of what AI can and can't do reliably in production. I've done this from inside the delivery layer, which means the advice is grounded in what actually ships — not what looks good in a deck." },
+      ] },
     ],
   },
   contact: {
