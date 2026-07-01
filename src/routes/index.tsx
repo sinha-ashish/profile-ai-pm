@@ -290,7 +290,18 @@ function HomePage() {
               <Reveal key={b.label}>
                 <div className="border-l-[3px] border-accent bg-card pl-5 py-3 md:pl-7">
                   <div className="mb-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.1em] text-accent">{b.label}</div>
-                  <p className="text-[0.95rem] leading-[1.7] text-mid">{b.body}</p>
+                  {"body" in b ? (
+                    <p className="text-[0.95rem] leading-[1.7] text-mid">{b.body}</p>
+                  ) : (
+                    <div className="space-y-4">
+                      {b.subBlocks.map((sub) => (
+                        <div key={sub.subLabel}>
+                          <div className="mb-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.1em] text-accent">{sub.subLabel}</div>
+                          <p className="text-[0.95rem] leading-[1.7] text-mid">{sub.subBody}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
