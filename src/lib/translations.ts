@@ -35,7 +35,40 @@ export type Translation = {
 };
 
 const en: Translation = {
-  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", writing: "Writing", resume: "Resume", cta: "Let's talk" },
+  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", studio: "Studio", writing: "Writing", resume: "Resume", cta: "Let's talk" },
+  studio: {
+    label: "Studio — Things I've Actually Shipped",
+    h2: "I build the tool that forces an honest answer.",
+    intro: "Three working products, live and deployed. Each takes something most teams accept as messy or hand-waved — what AI is really worth, how a go-to-market actually holds together, whether the books truly reconcile — and imposes structured judgement on it. Built solo, on my own synthesised methodology, no employer artefacts. This is what applied AI fluency looks like when it's real.",
+    livePill: "Live",
+    cards: [
+      {
+        tag: "AI Economics",
+        title: "Baseline AI",
+        problem: "The AI ROI Ledger. Estimate an initiative's value and cost, track real usage, then reconcile what was promised against what was measured.",
+        judgement: "Know what your AI is worth — not just what it costs.",
+        url: "https://baseline-ai-psi.vercel.app/",
+        cta: "Open →",
+      },
+      {
+        tag: "Product Strategy",
+        title: "Horizon GTM",
+        problem: "A go-to-market strategy engine that turns a launch from a slide deck of good intentions into a structured, pressure-tested plan.",
+        judgement: "Strategy is only real when it survives contact with structure.",
+        url: "https://horizon-gtm.vercel.app/",
+        cta: "Open →",
+      },
+      {
+        tag: "Autonomous Finance",
+        title: "Semantic Reconciliation Engine",
+        problem: "Reconciles ledgers against ingested invoices and receipts — reading meaning, not just numbers — resolving forex settlement, dates, and merchant identity across formats, with its reasoning shown in full.",
+        judgement: "The machine should explain why the numbers disagree, not just flag that they do.",
+        url: "https://the-semantic-reconciliation-engine.vercel.app/",
+        cta: "Open →",
+      },
+    ],
+    moreLabel: "More incoming",
+  },
   hero: {
     badge: "Senior AI Product Leader · Paris",
     h1: "What gets enterprise AI out of the demo — and into production?",
