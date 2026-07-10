@@ -10,9 +10,11 @@ export type CertT = { icon: string; title: string; sub: string };
 export type TierT = { dot: string; title: string; desc: string; bar: number };
 export type FitSubBlockT = { subLabel: string; subBody: string };
 export type FitBlockT = { label: string; body: string } | { label: string; subBlocks: FitSubBlockT[] };
+export type StudioCardT = { tag: string; title: string; problem: string; judgement: string; url: string; cta: string };
 
 export type Translation = {
-  nav: { index: string; dashboard: string; manual: string; writing: string; resume: string; cta: string };
+  nav: { index: string; dashboard: string; manual: string; studio: string; writing: string; resume: string; cta: string };
+  studio: { label: string; h2: string; intro: string; livePill: string; cards: StudioCardT[]; moreLabel: string };
   hero: { badge: string; h1: string; h1Html?: string; sub: string; cta: string; linkedin: string };
   dashboard: { label: string; h2: string; cards: DashCardT[]; complianceTags: string[]; sprintLabel: string; sprintCaption: string; partnersCaption: string; csatCaption: string; adoptionCaption: string };
   expertise: { label: string; h2: string; items: ExpertiseT[] };
@@ -33,7 +35,40 @@ export type Translation = {
 };
 
 const en: Translation = {
-  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", writing: "Writing", resume: "Resume", cta: "Let's talk" },
+  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", studio: "Studio", writing: "Writing", resume: "Resume", cta: "Let's talk" },
+  studio: {
+    label: "Studio — Things I've Actually Shipped",
+    h2: "I build the tool that forces an honest answer.",
+    intro: "Three working products, live and deployed. Each takes something most teams accept as messy or hand-waved — what AI is really worth, how a go-to-market actually holds together, whether the books truly reconcile — and imposes structured judgement on it. Built solo, on my own synthesised methodology, no employer artefacts. This is what applied AI fluency looks like when it's real.",
+    livePill: "Live",
+    cards: [
+      {
+        tag: "AI Economics",
+        title: "Baseline AI",
+        problem: "The AI ROI Ledger. Estimate an initiative's value and cost, track real usage, then reconcile what was promised against what was measured.",
+        judgement: "Know what your AI is worth — not just what it costs.",
+        url: "https://baseline-ai-psi.vercel.app/",
+        cta: "Open →",
+      },
+      {
+        tag: "Product Strategy",
+        title: "Horizon GTM",
+        problem: "A go-to-market strategy engine that turns a launch from a slide deck of good intentions into a structured, pressure-tested plan.",
+        judgement: "Strategy is only real when it survives contact with structure.",
+        url: "https://horizon-gtm.vercel.app/",
+        cta: "Open →",
+      },
+      {
+        tag: "Autonomous Finance",
+        title: "Semantic Reconciliation Engine",
+        problem: "Reconciles ledgers against ingested invoices and receipts — reading meaning, not just numbers — resolving forex settlement, dates, and merchant identity across formats, with its reasoning shown in full.",
+        judgement: "The machine should explain why the numbers disagree, not just flag that they do.",
+        url: "https://the-semantic-reconciliation-engine.vercel.app/",
+        cta: "Open →",
+      },
+    ],
+    moreLabel: "More incoming",
+  },
   hero: {
     badge: "Senior AI Product Leader · Paris",
     h1: "What gets enterprise AI out of the demo — and into production?",
@@ -167,7 +202,40 @@ const en: Translation = {
 };
 
 const fr: Translation = {
-  nav: { index: "Accueil", dashboard: "Tableau de bord", manual: "Manuel", writing: "Articles", resume: "CV", cta: "Discutons" },
+  nav: { index: "Accueil", dashboard: "Tableau de bord", manual: "Manuel", studio: "Studio", writing: "Articles", resume: "CV", cta: "Discutons" },
+  studio: {
+    label: "Studio — Ce que j'ai réellement livré",
+    h2: "Je construis l'outil qui impose une réponse honnête.",
+    intro: "Trois produits en fonctionnement, en ligne et déployés. Chacun s'attaque à ce que la plupart des équipes acceptent comme flou ou traité à la main — ce que vaut réellement l'IA, la tenue d'un go-to-market, la véritable réconciliation des comptes — et y impose un arbitrage structuré. Construits en solo, sur une méthodologie que j'ai synthétisée moi-même, sans artefact d'employeur. C'est à ça que ressemble une maîtrise de l'IA quand elle est réelle.",
+    livePill: "En ligne",
+    cards: [
+      {
+        tag: "Économie de l'IA",
+        title: "Baseline AI",
+        problem: "Le registre du ROI de l'IA. Estimer la valeur et le coût d'une initiative, suivre l'usage réel, puis réconcilier ce qui a été promis avec ce qui a été mesuré.",
+        judgement: "Savoir ce que vaut votre IA — pas seulement ce qu'elle coûte.",
+        url: "https://baseline-ai-psi.vercel.app/",
+        cta: "Ouvrir →",
+      },
+      {
+        tag: "Stratégie produit",
+        title: "Horizon GTM",
+        problem: "Un moteur de stratégie go-to-market qui transforme un lancement d'un deck de bonnes intentions en un plan structuré et éprouvé sous pression.",
+        judgement: "Une stratégie n'est réelle que si elle survit au contact de la structure.",
+        url: "https://horizon-gtm.vercel.app/",
+        cta: "Ouvrir →",
+      },
+      {
+        tag: "Finance autonome",
+        title: "Semantic Reconciliation Engine",
+        problem: "Réconcilie les grands livres avec les factures et reçus ingérés — en lisant le sens, pas seulement les nombres — en résolvant règlement forex, dates et identité marchande à travers les formats, avec son raisonnement affiché en clair.",
+        judgement: "La machine doit expliquer pourquoi les chiffres divergent — pas seulement le signaler.",
+        url: "https://the-semantic-reconciliation-engine.vercel.app/",
+        cta: "Ouvrir →",
+      },
+    ],
+    moreLabel: "D'autres arrivent",
+  },
   hero: {
     badge: "Senior Leader Produit IA · Paris",
     h1: "Comment passer de la démo à la production en IA d'entreprise ?",
