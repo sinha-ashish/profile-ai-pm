@@ -35,7 +35,7 @@ export type Translation = {
 };
 
 const en: Translation = {
-  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", studio: "Studio", writing: "Writing", resume: "Resume", cta: "Let's talk" },
+  nav: { index: "Index", dashboard: "Dashboard", manual: "Manual", studio: "Studio", writing: "Articles", resume: "Resume", cta: "Let's talk" },
   studio: {
     label: "Studio — Things I've Actually Shipped",
     h2: "I build the tool that forces an honest answer.",
@@ -72,7 +72,7 @@ const en: Translation = {
   hero: {
     badge: "Senior AI Product Leader · Paris",
     h1: "What gets enterprise AI out of the demo — and into production?",
-    sub: "9 years building the governance, delivery cadence, and cross-functional discipline that makes AI dependable at scale. I run the squads, clear the blockers, and ship the use cases.",
+    sub: "I bring the arbitrage judgement that decides what enterprise AI is worth building — and the delivery discipline to get it into production.",
     cta: "Get in touch",
     linkedin: "View LinkedIn →",
   },
@@ -115,7 +115,7 @@ const en: Translation = {
     ],
   },
   manual: {
-    label: "The Leadership Vault — Operating Principles",
+    label: "Operating Principles",
     h2: "How decisions actually get made in the squad.",
     principles: [
       { n: "01", title: "Problem Obsession Over Feature Attachment", body: "Our objective is not to release meticulously built features; it is to solve the business problem. When a blocker hits — like an unavailable model — we do not panic. We pivot, explore, and often end up interfacing a more powerful or cost-effective alternative.", visual: "crisis" },
@@ -174,13 +174,13 @@ const en: Translation = {
   writing: {
     label: "Writing",
     h2: "Notes from inside enterprise AI delivery.",
-    intro: "Articles published roughly every week — on AI delivery, enterprise product, and execution frameworks.",
+    intro: "Field notes from inside enterprise AI — on cost, governance, and deciding what not to build.",
   },
   fit: {
     label: "Working Philosophy",
     h2: "How I work best.",
     blocks: [
-      { label: "Environment", body: "High autonomy, fast sign-off culture. I do my best work when squads are empowered to move without multi-layered bureaucracy — slower organizational velocity is fine; that's exactly the zone where I add the most value. What's non-negotiable is the freedom to act on that velocity once I'm in." },
+      { label: "Environment", body: "High autonomy, low-friction, high-challenge environments. I gravitate toward dynamic teams where sign-off is fast, ownership is clear, and the work is genuinely hard — and I bring momentum with me. Bureaucracy-heavy setups aren't where I add value; empowered squads with real problems are." },
       { label: "Ownership", body: "Genuine product ownership, not delivery-management-in-name-only. I want to shape the roadmap, not just orchestrate someone else's." },
       { label: "Culture", body: "Fiercely user-obsessed, growth-centered teams that default to giving each other the benefit of the doubt. Ego-free isn't a slogan here — it's an operating requirement." },
       { label: "WHAT I BRING", subBlocks: [
@@ -195,7 +195,7 @@ const en: Translation = {
   },
   crisis: {
     title: "Crisis Resolution Flowchart",
-    subtitle: "Emotionally Disassociated Triage Framework",
+    subtitle: "Structured Triage Under Pressure",
     steps: ["Step 1: Ruthless Triage", "Step 2: Map Stakeholder Impact", "Step 3: Enforce Hackathon Mode", "Step 4: Deploy Bare Minimum Necessity"],
   },
   footer: { tagline: "Enterprise AI Product Leader · Paris, France" },
@@ -239,7 +239,7 @@ const fr: Translation = {
   hero: {
     badge: "Senior Leader Produit IA · Paris",
     h1: "Comment passer de la démo à la production en IA d'entreprise ?",
-    sub: "9 ans à piloter des squads pluridisciplinaires sur des portefeuilles €30M+. Je construis la gouvernance, la cadence de livraison et la rigueur opérationnelle qui rendent l'IA d'entreprise fiable — pas seulement impressionnante en démo.",
+    sub: "J'apporte le jugement d'arbitrage qui décide ce que l'IA d'entreprise vaut la peine d'être construit — et la discipline de livraison pour la mettre en production.",
     cta: "Me contacter",
     linkedin: "Voir LinkedIn →",
   },
@@ -282,7 +282,7 @@ const fr: Translation = {
     ],
   },
   manual: {
-    label: "Le Vault du Leadership — Principes opérationnels",
+    label: "Principes opérationnels",
     h2: "Comment les décisions se prennent vraiment dans la squad.",
     principles: [
       { n: "01", title: "Obsession du problème, pas attachement aux features", body: "L'objectif n'est pas de livrer des features méticuleusement construites ; c'est de résoudre le problème métier. Quand un blocage arrive — un modèle indisponible par exemple — on ne panique pas. On pivote, on explore, et on finit souvent par interfacer une alternative plus puissante ou plus économique.", visual: "crisis" },
@@ -292,7 +292,7 @@ const fr: Translation = {
     ],
   },
   architecture: {
-    label: "Vault Architecture",
+    label: "Architecture",
     h2: "Le cadre qui fait passer les cas d'usage IA du concept à la production conforme.",
     leftBadge: "Framework Tri-Tier d'exécution IA",
     leftTitle: "Une infrastructure calibrée pour un risque calibré",
@@ -341,18 +341,18 @@ const fr: Translation = {
   writing: {
     label: "Articles",
     h2: "Notes depuis l'intérieur de la livraison IA enterprise.",
-    intro: "Articles publiés environ toutes les semaines — sur la livraison IA, le produit enterprise et les cadres d'exécution.",
+    intro: "Notes de terrain sur l'IA en entreprise — coût, gouvernance, et l'art de décider ce qu'on ne construit pas.",
   },
   fit: {
     label: "Philosophie de travail",
     h2: "Dans quel environnement je performe.",
     blocks: [
-      { label: "Environnement", body: "Forte autonomie, culture de validation rapide. Je donne le meilleur de moi-même quand les squads sont habilitées à avancer sans bureaucratie à plusieurs niveaux — une vélocité organisationnelle initiale plus lente me convient ; c'est exactement là où j'apporte le plus de valeur. Ce qui n'est pas négociable, c'est la liberté d'agir sur cette vélocité une fois en poste." },
+      { label: "Environnement", body: "Forte autonomie, faible friction, forte exigence. J'évolue le mieux dans des équipes dynamiques où la validation est rapide, l'ownership est clair et les problèmes sont réellement difficiles — et j'y apporte de la dynamique. Les environnements bureaucratiques ne sont pas ceux où j'ajoute de la valeur ; les squads habilitées face à de vrais problèmes le sont." },
       { label: "Ownership", body: "Un ownership produit réel, pas de la gestion de livraison déguisée. Je veux façonner la roadmap, pas seulement orchestrer celle de quelqu'un d'autre." },
       { label: "Culture", body: "Des équipes farouchement centrées sur l'utilisateur, orientées croissance, qui accordent par défaut le bénéfice du doute. L'absence d'ego n'est pas un slogan ici — c'est une exigence opérationnelle." },
       { label: "CE QUE J'APPORTE", subBlocks: [
         { subLabel: "Maîtrise IA appliquée", subBody: "À travers un développement et un déploiement continus et pratiques de prototypes GenAI sur un large éventail de cas d'usage — pas seulement en pilotant la livraison, mais en construisant directement à l'intérieur — j'ai développé une véritable maîtrise technique de la stack IA : architecture, guardrailing, cadres de conformité, et économie du déploiement de l'IA à l'échelle enterprise. J'affine activement les méthodologies derrière cette couche économique, ancrées dans le framework de routage Tri-Tier et la modélisation de consommation de tokens que j'ai construits et itérés en production. Ce n'est pas une maîtrise par proximité. C'est une maîtrise par la pratique." },
-        { subLabel: "Arbitrage IA exécutif", subBody: "Nous traversons un moment sans précédent pour le leadership senior : la pression d'adopter l'IA est réelle, mais le risque de la déployer mal l'est tout autant. La plupart des dirigeants COMEX sont — à juste titre — plus pragmatiques et calibrés au risque que le cycle de hype ne le suggère. Je suis uniquement positionné pour opérer à cette interface : traduire la capacité IA en décisions justifiées par le ROI et calibrées au risque sur lesquelles les dirigeants peuvent réellement agir, conseiller sur la priorisation des cas d'usage, la sélection des modèles et l'allocation budgétaire sur la base d'une compréhension genuine de ce que l'IA peut et ne peut pas faire de manière fiable en production. Je l'ai fait depuis l'intérieur de la couche de livraison, ce qui signifie que le conseil est ancré dans ce qui se livre réellement — pas dans ce qui est impressionnant en présentation." },
+        { subLabel: "Arbitrage IA exécutif", subBody: "Nous traversons un moment sans précédent pour le leadership senior : la pression d'adopter l'IA est réelle, mais le risque de la déployer mal l'est tout autant. La plupart des dirigeants COMEX sont — à juste titre — plus pragmatiques et calibrés au risque que le cycle de hype ne le suggère. Je suis uniquement positionné pour opérer à cette interface : traduire la capacité IA en décisions justifiées par le ROI et calibrées au risque sur lesquelles les dirigeants peuvent réellement agir, conseiller sur la priorisation des cas d'usage, la sélection des modèles et l'allocation budgétaire sur la base d'une compréhension réelle de ce que l'IA peut et ne peut pas faire de manière fiable en production. Je l'ai fait depuis l'intérieur de la couche de livraison, ce qui signifie que le conseil est ancré dans ce qui se livre réellement — pas dans ce qui est impressionnant en présentation." },
       ] },
     ],
   },
@@ -362,7 +362,7 @@ const fr: Translation = {
   },
   crisis: {
     title: "Schéma de résolution de crise",
-    subtitle: "Cadre de triage émotionnellement dissocié",
+    subtitle: "Triage structuré sous pression",
     steps: ["Étape 1 : Triage sans concession", "Étape 2 : Cartographier l'impact parties prenantes", "Étape 3 : Mode hackathon imposé", "Étape 4 : Déployer le strict nécessaire"],
   },
   footer: { tagline: "Leader Produit IA Enterprise · Paris, France" },
