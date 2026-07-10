@@ -10,9 +10,11 @@ export type CertT = { icon: string; title: string; sub: string };
 export type TierT = { dot: string; title: string; desc: string; bar: number };
 export type FitSubBlockT = { subLabel: string; subBody: string };
 export type FitBlockT = { label: string; body: string } | { label: string; subBlocks: FitSubBlockT[] };
+export type StudioCardT = { tag: string; title: string; problem: string; judgement: string; url: string; cta: string };
 
 export type Translation = {
-  nav: { index: string; dashboard: string; manual: string; writing: string; resume: string; cta: string };
+  nav: { index: string; dashboard: string; manual: string; studio: string; writing: string; resume: string; cta: string };
+  studio: { label: string; h2: string; intro: string; livePill: string; cards: StudioCardT[]; moreLabel: string };
   hero: { badge: string; h1: string; h1Html?: string; sub: string; cta: string; linkedin: string };
   dashboard: { label: string; h2: string; cards: DashCardT[]; complianceTags: string[]; sprintLabel: string; sprintCaption: string; partnersCaption: string; csatCaption: string; adoptionCaption: string };
   expertise: { label: string; h2: string; items: ExpertiseT[] };
