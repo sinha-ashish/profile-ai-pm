@@ -202,7 +202,40 @@ const en: Translation = {
 };
 
 const fr: Translation = {
-  nav: { index: "Accueil", dashboard: "Tableau de bord", manual: "Manuel", writing: "Articles", resume: "CV", cta: "Discutons" },
+  nav: { index: "Accueil", dashboard: "Tableau de bord", manual: "Manuel", studio: "Studio", writing: "Articles", resume: "CV", cta: "Discutons" },
+  studio: {
+    label: "Studio — Ce que j'ai réellement livré",
+    h2: "Je construis l'outil qui impose une réponse honnête.",
+    intro: "Trois produits en fonctionnement, en ligne et déployés. Chacun s'attaque à ce que la plupart des équipes acceptent comme flou ou traité à la main — ce que vaut réellement l'IA, la tenue d'un go-to-market, la véritable réconciliation des comptes — et y impose un arbitrage structuré. Construits en solo, sur une méthodologie que j'ai synthétisée moi-même, sans artefact d'employeur. C'est à ça que ressemble une maîtrise de l'IA quand elle est réelle.",
+    livePill: "En ligne",
+    cards: [
+      {
+        tag: "Économie de l'IA",
+        title: "Baseline AI",
+        problem: "Le registre du ROI de l'IA. Estimer la valeur et le coût d'une initiative, suivre l'usage réel, puis réconcilier ce qui a été promis avec ce qui a été mesuré.",
+        judgement: "Savoir ce que vaut votre IA — pas seulement ce qu'elle coûte.",
+        url: "https://baseline-ai-psi.vercel.app/",
+        cta: "Ouvrir →",
+      },
+      {
+        tag: "Stratégie produit",
+        title: "Horizon GTM",
+        problem: "Un moteur de stratégie go-to-market qui transforme un lancement d'un deck de bonnes intentions en un plan structuré et éprouvé sous pression.",
+        judgement: "Une stratégie n'est réelle que si elle survit au contact de la structure.",
+        url: "https://horizon-gtm.vercel.app/",
+        cta: "Ouvrir →",
+      },
+      {
+        tag: "Finance autonome",
+        title: "Semantic Reconciliation Engine",
+        problem: "Réconcilie les grands livres avec les factures et reçus ingérés — en lisant le sens, pas seulement les nombres — en résolvant règlement forex, dates et identité marchande à travers les formats, avec son raisonnement affiché en clair.",
+        judgement: "La machine doit expliquer pourquoi les chiffres divergent — pas seulement le signaler.",
+        url: "https://the-semantic-reconciliation-engine.vercel.app/",
+        cta: "Ouvrir →",
+      },
+    ],
+    moreLabel: "D'autres arrivent",
+  },
   hero: {
     badge: "Senior Leader Produit IA · Paris",
     h1: "Comment passer de la démo à la production en IA d'entreprise ?",
