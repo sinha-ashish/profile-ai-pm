@@ -67,6 +67,66 @@ function HomePage() {
         </Container>
       </section>
 
+      {/* OPERATOR'S INSTINCT */}
+      <section id="instinct" className="border-b border-rule py-20 scroll-mt-20">
+        <Container>
+          <SectionLabel>{t.instinct.label}</SectionLabel>
+          <h2 className="mb-12 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em]">
+            {t.instinct.h2}
+          </h2>
+          <div className="grid grid-cols-1 gap-5">
+            {t.instinct.cards.map((c, i) => (
+              <Reveal key={c.tag} delay={i * 100}>
+                <InstinctCard {...c} />
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* STUDIO */}
+      <section id="studio" className="border-b border-rule py-20 scroll-mt-20">
+        <Container>
+          <SectionLabel>{t.studio.label}</SectionLabel>
+          <h2 className="mb-4 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em]">
+            {t.studio.h2}
+          </h2>
+          <p className="mb-12 max-w-[720px] text-[1.05rem] leading-[1.7] text-mid">
+            {t.studio.intro}
+          </p>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {t.studio.cards.map((c, i) => (
+              <Reveal key={c.title} delay={i * 100}>
+                <article className="flex h-full flex-col rounded-md border border-rule bg-card p-7 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)]">
+                  <div className="mb-3 flex items-center justify-between gap-2">
+                    <span className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-accent">{c.tag}</span>
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[rgba(26,86,219,0.08)] px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.08em] text-accent">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
+                      {t.studio.livePill}
+                    </span>
+                  </div>
+                  <h3 className="mb-3 font-syne text-[1.2rem] font-bold leading-[1.25] tracking-[-0.01em]">{c.title}</h3>
+                  <p className="text-[0.875rem] leading-[1.65] text-mid">{c.problem}</p>
+                  <p className="mt-4 border-t border-rule pt-4 font-syne text-[0.9rem] font-semibold leading-[1.5] text-ink">{c.judgement}</p>
+                  <div className="mt-5 flex-1" />
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.78rem] font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    {c.cta}
+                  </a>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <div className="mt-8 text-[0.78rem] font-medium uppercase tracking-[0.08em] text-mid">
+            {t.studio.moreLabel}
+          </div>
+        </Container>
+      </section>
+
       {/* EXECUTION DASHBOARD */}
       <section id="dashboard" className="border-b border-rule py-20 scroll-mt-20">
         <Container>
@@ -136,23 +196,6 @@ function HomePage() {
                 </div>
               );
             })}
-          </div>
-        </Container>
-      </section>
-
-      {/* OPERATOR'S INSTINCT */}
-      <section id="instinct" className="border-b border-rule py-20 scroll-mt-20">
-        <Container>
-          <SectionLabel>{t.instinct.label}</SectionLabel>
-          <h2 className="mb-12 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em]">
-            {t.instinct.h2}
-          </h2>
-          <div className="grid grid-cols-1 gap-5">
-            {t.instinct.cards.map((c, i) => (
-              <Reveal key={c.tag} delay={i * 100}>
-                <InstinctCard {...c} />
-              </Reveal>
-            ))}
           </div>
         </Container>
       </section>
@@ -245,48 +288,6 @@ function HomePage() {
         </Container>
       </section>
 
-      {/* STUDIO */}
-      <section id="studio" className="border-b border-rule py-20 scroll-mt-20">
-        <Container>
-          <SectionLabel>{t.studio.label}</SectionLabel>
-          <h2 className="mb-4 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em]">
-            {t.studio.h2}
-          </h2>
-          <p className="mb-12 max-w-[720px] text-[1.05rem] leading-[1.7] text-mid">
-            {t.studio.intro}
-          </p>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {t.studio.cards.map((c, i) => (
-              <Reveal key={c.title} delay={i * 100}>
-                <article className="flex h-full flex-col rounded-md border border-rule bg-card p-7 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)]">
-                  <div className="mb-3 flex items-center justify-between gap-2">
-                    <span className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-accent">{c.tag}</span>
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[rgba(26,86,219,0.08)] px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.08em] text-accent">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent2" />
-                      {t.studio.livePill}
-                    </span>
-                  </div>
-                  <h3 className="mb-3 font-syne text-[1.2rem] font-bold leading-[1.25] tracking-[-0.01em]">{c.title}</h3>
-                  <p className="text-[0.875rem] leading-[1.65] text-mid">{c.problem}</p>
-                  <p className="mt-4 border-t border-rule pt-4 font-syne text-[0.9rem] font-semibold leading-[1.5] text-ink">{c.judgement}</p>
-                  <div className="mt-5 flex-1" />
-                  <a
-                    href={c.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.78rem] font-semibold text-white transition-opacity hover:opacity-90"
-                  >
-                    {c.cta}
-                  </a>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-          <div className="mt-8 text-[0.78rem] font-medium uppercase tracking-[0.08em] text-mid">
-            {t.studio.moreLabel}
-          </div>
-        </Container>
-      </section>
 
 
       <section id="writing" className="border-b border-rule py-20 scroll-mt-20">

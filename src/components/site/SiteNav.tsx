@@ -5,9 +5,9 @@ export function SiteNav() {
 
   const sections = [
     { hash: "#home", label: t.nav.index },
+    { hash: "#studio", label: t.nav.studio },
     { hash: "#dashboard", label: t.nav.dashboard },
     { hash: "#manual", label: t.nav.manual },
-    { hash: "#studio", label: t.nav.studio },
     { hash: "#writing", label: t.nav.writing },
     { hash: "#resume", label: t.nav.resume },
   ];

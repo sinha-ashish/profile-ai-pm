@@ -13,6 +13,28 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "what-not-to-build",
+    title: "Deciding What Not to Build: The Most Senior Call in Enterprise AI",
+    dateLabel: "July 10, 2026",
+    isoDate: "2026-07-10",
+    readingTime: "5 min read",
+    paragraphs: [
+      "The hardest, most senior AI decision isn't which use case to ship next — it's recognising which initiative isn't ready for its data, its org, or its risk envelope yet. The seniority is in having the authority to park it cleanly while the rest of the portfolio keeps shipping, and the credibility to make that call stick.",
+      "[DRAFT — replace with author's final copy]",
+    ],
+  },
+  {
+    slug: "economics-of-a-genai-initiative",
+    title: "The Economics Nobody Models: What a GenAI Initiative Actually Costs at Scale",
+    dateLabel: "July 10, 2026",
+    isoDate: "2026-07-10",
+    readingTime: "6 min read",
+    paragraphs: [
+      "Enterprises approve GenAI on capability and get ambushed by run-cost six months later. The seniority is in the arbitrage layer — routing the right task to the right model tier, and modelling token economics before deployment rather than after the invoice lands.",
+      "[DRAFT — replace with author's final copy]",
+    ],
+  },
+  {
     slug: "80-40-rule",
     title: "The 80/40 Rule: Why High-Signal Imperfection Beats Slow Enterprise Roadmaps",
     dateLabel: "May 31, 2026",
