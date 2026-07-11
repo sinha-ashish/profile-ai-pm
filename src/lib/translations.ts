@@ -29,7 +29,7 @@ export type Translation = {
   skills: { label: string; h2: string; groups: SkillGroupT[]; certs: CertT[] };
   writing: { label: string; h2: string; intro: string };
   fit: { label: string; h2: string; blocks: FitBlockT[] };
-  contact: { h2: string; body: string };
+  contact: { h2: string; body: string; ctaEmail: string; ctaLinkedin: string };
   crisis: { title: string; subtitle: string; steps: string[] };
   footer: { tagline: string };
 };
@@ -192,6 +192,8 @@ const en: Translation = {
   contact: {
     h2: "Let's build something that matters.",
     body: "Enterprise AI delivery, governance, and product strategy at scale. Reach out if you're working on something serious.",
+    ctaEmail: "Contact me",
+    ctaLinkedin: "View LinkedIn →",
   },
   crisis: {
     title: "Crisis Resolution Flowchart",
@@ -359,6 +361,8 @@ const fr: Translation = {
   contact: {
     h2: "Construisons quelque chose qui compte.",
     body: "Livraison IA enterprise, gouvernance et stratégie produit à l'échelle. Contactez-moi si vous travaillez sur quelque chose d'ambitieux.",
+    ctaEmail: "Me contacter",
+    ctaLinkedin: "Voir LinkedIn →",
   },
   crisis: {
     title: "Schéma de résolution de crise",
