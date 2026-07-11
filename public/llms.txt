@@ -1,11 +1,22 @@
-# Ashish Sinha — Enterprise AI Product Leader
+# Ashish Sinha — Enterprise AI Product Leader & Strategic Advisor
 
-> Portfolio of a senior AI product leader focused on shipping enterprise AI from prototype to production — execution dashboard, operating manual, architecture vault, experience timeline, and writing.
+> Portfolio of a senior AI product leader and advisor focused on arbitrage judgement — what to build, what to kill, what to sequence — across enterprise AI portfolios. Studio of live products, execution dashboard, operating manual, architecture framework, experience timeline, and writing.
 
 ## Pages
 
-- [Home](/): Full portfolio with execution dashboard, expertise, operating instinct, manual, architecture vault, experience, skills, writing, and contact.
-- [The 80/40 Rule](/writing/80-40-rule): Article on why high-signal imperfection beats slow enterprise roadmaps.
+- [Home](/): Full portfolio with operator's instinct, studio, execution dashboard, expertise, operating manual, architecture, experience, skills, articles, working philosophy, and contact.
+
+## Studio (live products)
+
+- [Baseline AI](https://baseline-ai-psi.lovable.app/): Live product from the studio.
+- [Horizon GTM](https://horizon-gtm.lovable.app/): Live product from the studio.
+- [Semantic Reconciliation Engine](https://the-semantic-reconciliation-engine.lovable.app/): Live product from the studio.
+
+## Articles
+
+- [Deciding What Not to Build](/writing/what-not-to-build): The most senior call in enterprise AI — recognising which initiative isn't ready for its data, org, or risk envelope yet.
+- [The Economics Nobody Models](/writing/economics-of-a-genai-initiative): What a GenAI initiative actually costs at scale — token economics, model-tier arbitrage, and run-cost modelling before deployment.
+- [The 80/40 Rule](/writing/80-40-rule): Why high-signal imperfection beats slow enterprise roadmaps.
 
 ## Optional
 

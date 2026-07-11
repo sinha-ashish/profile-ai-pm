@@ -56,7 +56,7 @@
       {
         "name": "get_profile",
         "title": "Get profile",
-        "description": "Return Ashish Sinha's professional profile: role, location, focus areas, and key links.",
+        "description": "Return Ashish Sinha's professional profile: role, location, advisory focus, and key links.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

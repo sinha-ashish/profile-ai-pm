@@ -356,26 +356,47 @@ function HomePage() {
       {/* CONTACT / CTA */}
       <section id="contact" className="py-20 scroll-mt-20">
         <Container>
-          <div className="grid items-center gap-12 rounded-xl bg-ink p-9 md:grid-cols-[1fr_auto] md:p-16">
-            <div>
-              <h2 className="mb-2.5 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em] text-white">
-                {t.contact.h2}
-              </h2>
-              <p className="text-[0.95rem] text-white/70">
-                {t.contact.body}
-              </p>
+          <div className="grid items-stretch gap-6 md:grid-cols-[1fr_auto]">
+            <div className="grid items-center gap-12 rounded-xl bg-ink p-9 md:grid-cols-[1fr_auto] md:p-16">
+              <div>
+                <h2 className="mb-2.5 font-syne text-[clamp(1.6rem,3vw,2.4rem)] font-bold leading-[1.15] tracking-[-0.02em] text-white">
+                  {t.contact.h2}
+                </h2>
+                <p className="text-[0.95rem] text-white/70">
+                  {t.contact.body}
+                </p>
+              </div>
+              <div className="flex flex-row flex-wrap gap-3 md:flex-col">
+                <a href="mailto:ashish.sinha2408@gmail.com" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/30 bg-white/15 px-[22px] py-3.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-white/25 hover:border-white/50">
+                  ✉️ &nbsp;ashish.sinha2408@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/sinha-ashish/" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/30 bg-white/15 px-[22px] py-3.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-white/25 hover:border-white/50">
+                  💼 &nbsp;LinkedIn →
+                </a>
+              </div>
             </div>
-            <div className="flex flex-row flex-wrap gap-3 md:flex-col">
-              <a href="mailto:ashish.sinha2408@gmail.com" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/30 bg-white/15 px-[22px] py-3.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-white/25 hover:border-white/50">
-                ✉️ &nbsp;ashish.sinha2408@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/sinha-ashish/" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 whitespace-nowrap rounded-md border border-white/30 bg-white/15 px-[22px] py-3.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-white/25 hover:border-white/50">
-                💼 &nbsp;LinkedIn →
-              </a>
+            <div className="flex items-center justify-center rounded-xl border border-rule bg-card p-6">
+              <div
+                className="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="large"
+                data-theme="light"
+                data-type="VERTICAL"
+                data-vanity="sinha-ashish"
+                data-version="v1"
+              >
+                <a
+                  className="badge-base__link LI-simple-link"
+                  href="https://fr.linkedin.com/in/sinha-ashish?trk=profile-badge"
+                >
+                  Ashish Sinha
+                </a>
+              </div>
             </div>
           </div>
         </Container>
       </section>
+
     </>
   );
 }
