@@ -4,6 +4,7 @@ import { SectionLabel } from "../components/site/SectionLabel";
 import { Reveal } from "../components/site/Reveal";
 import { OperatingAccordion } from "../components/site/OperatingAccordion";
 import { TriTier } from "../components/site/TriTier";
+import { LinkedInProfileBadge } from "../components/site/LinkedInProfileBadge";
 import { articles } from "../lib/articles";
 import { useLanguage } from "../lib/LanguageContext";
 
@@ -382,23 +383,8 @@ function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="mx-auto flex min-h-[280px] w-full max-w-[280px] items-center justify-center rounded-lg bg-white p-4 md:w-[260px]">
-              <div
-                className="badge-base LI-profile-badge"
-                data-locale="en_US"
-                data-size="large"
-                data-theme="light"
-                data-type="VERTICAL"
-                data-vanity="sinha-ashish"
-                data-version="v1"
-              >
-                <a
-                  className="badge-base__link LI-simple-link"
-                  href="https://fr.linkedin.com/in/sinha-ashish?trk=profile-badge"
-                >
-                  Ashish Sinha
-                </a>
-              </div>
+            <div className="mx-auto w-full max-w-[305px] md:mx-0">
+              <LinkedInProfileBadge />
             </div>
           </div>
         </Container>
