@@ -26,8 +26,8 @@ export const articles: Article[] = [
   {
     slug: "economics-of-a-genai-initiative",
     title: "The Economics Nobody Models: What a GenAI Initiative Actually Costs at Scale",
-    dateLabel: "July 10, 2026",
-    isoDate: "2026-07-10",
+    dateLabel: "JUNE 19 , 2026",
+    isoDate: "2026-06-19",
     readingTime: "6 min read",
     paragraphs: [
       "Enterprises approve GenAI on capability and get ambushed by run-cost six months later. The seniority is in the arbitrage layer — routing the right task to the right model tier, and modelling token economics before deployment rather than after the invoice lands.",
