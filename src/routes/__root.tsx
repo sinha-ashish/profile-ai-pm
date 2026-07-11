@@ -99,9 +99,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" },
     ],
-    scripts: [
-      { src: "https://platform.linkedin.com/badges/js/profile.js", async: true, defer: true, type: "text/javascript" },
-    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
