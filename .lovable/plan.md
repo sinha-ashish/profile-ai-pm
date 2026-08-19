@@ -1,43 +1,30 @@
-## Contact block: integrate LinkedIn badge, mask email, responsive redesign
+# Collapsible sections with Apple-style scroll reveal
 
-Rework the `#contact` section in `src/routes/index.tsx` into a single dark card (drop the separate white badge card that currently sits beside it and renders empty).
+## What changes
 
-### Layout (inside the existing `bg-ink` rounded card)
+1. **Writing section hidden**
+   - The "Writing / Articles" block disappears from the homepage and the "Articles" item is removed from the top menu.
+   - Article pages themselves (`/writing/<slug>`), the sitemap, llms.txt and the agent tools keep working — nothing is deleted, just unlinked from the page.
 
-Two-column on `md+`, stacked on mobile:
+2. **Every content section becomes an expandable panel**
+   Instinct, Studio, Dashboard, Expertise, Operating Manual, Architecture Vault, Experience, Skills and Working Philosophy each get a clickable header row (section label + heading + a chevron). Hero and Contact stay always visible, unchanged.
 
-```text
-┌─────────────────────────────┬───────────────────────┐
-│ H2: Let's build...          │  [LinkedIn badge]     │
-│ Body copy                   │  (light card, inside  │
-│                             │   dark block)         │
-│ [ Contact me ]  (mailto)    │                       │
-│ [ View LinkedIn → ]         │                       │
-└─────────────────────────────┴───────────────────────┘
-```
+3. **Apple-style progressive reveal**
+   - A section auto-expands the first time it scrolls into view: content fades in and the panel height animates open. Once opened it stays open — no re-collapsing on scroll.
+   - Clicking a header manually collapses or expands that section at any time.
+   - Users with reduced-motion preferences get everything open instantly, no animation.
 
-- Mobile: single column, text → CTAs → badge, full width, centered badge.
-- Desktop: text + stacked CTAs on the left, badge panel on the right.
+4. **Menu navigation auto-expands**
+   Clicking a top-menu item (Studio, Dashboard, Manual, etc.) expands that section if it is still collapsed, then smooth-scrolls to it with the sticky nav offset respected. Same behaviour for a direct link with a hash, e.g. `/#manual` on first load.
 
-### CTA changes
+## Look and feel
 
-- Email button: label becomes **"Contact me"** / **"Me contacter"** (real address hidden from view). `href` stays `mailto:ashish.sinha2408@gmail.com` so clicking still opens mail. Keep the ✉️ icon.
-- LinkedIn button stays as "View LinkedIn →" / "Voir LinkedIn →", moved directly below the email CTA (stacked vertically on all breakpoints for consistency).
-- Both buttons `w-full sm:w-auto` inside their column so they don't stretch awkwardly on desktop.
+Headers reuse the existing rule borders, Syne headings, section-label styling and blue accent. The chevron is a thin accent-coloured icon that rotates on open. No new colours, fonts or dark surfaces. The existing per-card `Reveal` stagger inside sections keeps working and runs when a section opens.
 
-### Badge panel
+## Technical notes
 
-- Wrap the LinkedIn `badge-base LI-profile-badge` div in a light inner card (`bg-white rounded-lg p-4`) so the LinkedIn-rendered light-theme badge remains legible inside the dark contact block.
-- Keep `data-theme="light"`, `data-type="VERTICAL"`, `data-vanity="sinha-ashish"`. Loader script already lives in `__root.tsx` — no change there.
-- Add `min-h` on the panel so it doesn't collapse before the LinkedIn script hydrates.
-
-### Translations
-
-Add `contact.ctaEmail` = "Contact me" / "Me contacter" in `src/lib/translations.ts` and use it in place of the raw email text. Keep `contact.h2` and `contact.body` unchanged.
-
-### Files touched
-
-- `src/routes/index.tsx` — restructure `#contact` section, remove the outer 2-column grid + separate badge card.
-- `src/lib/translations.ts` — add masked email CTA label (EN + FR).
-
-No other sections, styles, or components change.
+- New `src/components/site/CollapsibleSection.tsx`: wraps `id`, `label`, `heading`, children; internal open state, grid-rows height transition (`grid-template-rows: 0fr → 1fr`) plus opacity for smooth fade, `IntersectionObserver` (reusing `useInView`) to auto-open on first entry, `aria-expanded` / `aria-controls` on the header button.
+- New lightweight context (`SectionExpandContext`) so `SiteNav` can request "open section X" before scrolling; nav anchors get an `onClick` that opens the target then calls `scrollIntoView`, and a `hashchange` / initial-hash effect handles deep links.
+- `src/routes/index.tsx`: replace the nine `<section>` wrappers with `<CollapsibleSection>`, delete the `#writing` section and the now-unused `articles` import.
+- `src/components/site/SiteNav.tsx`: drop the `#writing` entry, add the expand-then-scroll handler.
+- Translations untouched apart from leaving `nav.writing` / `writing` keys in place (unused, harmless).
