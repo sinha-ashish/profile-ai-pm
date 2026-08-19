@@ -1,14 +1,27 @@
+import { useEffect } from "react";
 import { useLanguage } from "../../lib/LanguageContext";
+import { openAndScrollTo, useSectionExpand } from "./SectionExpand";
 
 export function SiteNav() {
   const { lang, setLang, t } = useLanguage();
+  const expand = useSectionExpand();
+
+  // Deep links like /#manual should expand the target section on load.
+  useEffect(() => {
+    const openFromHash = () => {
+      const id = window.location.hash.replace("#", "");
+      if (id) setTimeout(() => openAndScrollTo(id, expand?.requestOpen), 60);
+    };
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, [expand]);
 
   const sections = [
     { hash: "#home", label: t.nav.index },
     { hash: "#studio", label: t.nav.studio },
     { hash: "#dashboard", label: t.nav.dashboard },
     { hash: "#manual", label: t.nav.manual },
-    { hash: "#writing", label: t.nav.writing },
     { hash: "#resume", label: t.nav.resume },
   ];
 
@@ -24,6 +37,15 @@ export function SiteNav() {
               key={s.hash}
               href={s.hash === "#resume" ? "https://rxresu.me/five.summers/senior-product-manager" : `/${s.hash}`}
               {...(s.hash === "#resume" ? { target: "_blank", rel: "noreferrer" } : {})}
+              onClick={(e) => {
+                if (s.hash === "#resume") return;
+                const id = s.hash.slice(1);
+                if (document.getElementById(id)) {
+                  e.preventDefault();
+                  window.history.replaceState(null, "", s.hash);
+                  openAndScrollTo(id, expand?.requestOpen);
+                }
+              }}
               className="text-[0.82rem] font-medium uppercase tracking-[0.04em] text-mid transition-colors hover:text-ink"
             >
               {s.label}
