@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "../components/site/SiteNav";
 import { SiteFooter } from "../components/site/SiteFooter";
 import { LanguageProvider } from "../lib/LanguageContext";
+import { SectionExpandProvider } from "../components/site/SectionExpand";
 
 function NotFoundComponent() {
   return (
@@ -127,13 +128,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
-        <div className="flex min-h-screen flex-col">
-          <SiteNav />
-          <main className="flex-1">
-            <Outlet />
-          </main>
-          <SiteFooter />
-        </div>
+        <SectionExpandProvider>
+          <div className="flex min-h-screen flex-col">
+            <SiteNav />
+            <main className="flex-1">
+              <Outlet />
+            </main>
+            <SiteFooter />
+          </div>
+        </SectionExpandProvider>
       </LanguageProvider>
     </QueryClientProvider>
   );

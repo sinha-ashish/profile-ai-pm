@@ -44,8 +44,8 @@ export const Route = createFileRoute("/writing/$slug")({
     <section className="py-20">
       <Container>
         <h1 className="font-syne text-3xl font-bold">Article not found</h1>
-        <Link to="/writing" className="mt-4 inline-block text-accent">
-          ← Back to Writing
+        <Link to="/" className="mt-4 inline-block text-accent">
+          ← Back home
         </Link>
       </Container>
     </section>
@@ -61,8 +61,8 @@ function ArticlePage() {
   return (
     <section className="border-b border-rule py-20">
       <Container>
-        <Link to="/writing" className="mb-8 inline-block text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-mid transition-colors hover:text-accent">
-          ← Writing
+        <Link to="/" className="mb-8 inline-block text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-mid transition-colors hover:text-accent">
+          ← Home
         </Link>
         <article className="mx-auto max-w-[720px]">
           <div className="mb-4 flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-mid">
