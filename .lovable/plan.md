@@ -28,3 +28,7 @@ Headers reuse the existing rule borders, Syne headings, section-label styling an
 - `src/routes/index.tsx`: replace the nine `<section>` wrappers with `<CollapsibleSection>`, delete the `#writing` section and the now-unused `articles` import.
 - `src/components/site/SiteNav.tsx`: drop the `#writing` entry, add the expand-then-scroll handler.
 - Translations untouched apart from leaving `nav.writing` / `writing` keys in place (unused, harmless).
+
+## Pre-existing build error to fix along the way
+
+`src/routes/writing.$slug.tsx` links back to `/writing`, a route that does not exist, so the type check fails on two `<Link to="/writing">` lines. Since the Writing section is being unlinked from the homepage anyway, those back-links will point to `/` (the homepage) instead.
