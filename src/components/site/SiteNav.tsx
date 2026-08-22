@@ -22,7 +22,6 @@ export function SiteNav() {
     { hash: "#studio", label: t.nav.studio },
     { hash: "#dashboard", label: t.nav.dashboard },
     { hash: "#manual", label: t.nav.manual },
-    { hash: "#resume", label: t.nav.resume },
   ];
 
   return (
